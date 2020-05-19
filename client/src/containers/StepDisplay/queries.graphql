@@ -1,0 +1,30 @@
+fragment commonStepFields on Step {
+  id
+  name
+  description
+  status
+}
+
+query StepInfo($id: String!) {
+  stepByID(id: $id) {
+    ...commonStepFields
+  }
+}
+
+subscription StepUpdates($id: String!) {
+  stepUpdated(id: $id) {
+    type
+    step {
+      ...commonStepFields
+    }
+  }
+}
+
+mutation ExecuteStep($id: String!) {
+  executeStep(id: $id) {
+    id
+    name
+    description
+    status
+  }
+}

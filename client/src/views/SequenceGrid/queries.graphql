@@ -1,0 +1,13 @@
+query SequenceList {
+  sequences {
+    id
+    name
+    description
+    steps {
+      id
+      name
+      description
+      status
+    }
+  }
+}

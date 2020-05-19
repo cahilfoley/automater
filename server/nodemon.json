@@ -1,0 +1,13 @@
+{
+  "watch": [
+    "src"
+  ],
+  "ext": "js,ts",
+  "env": {
+    "TS_NODE_TRANSPILE_ONLY": true,
+    "TS_NODE_FILES": true
+  },
+  "execMap": {
+    "ts": "ts-node"
+  }
+}

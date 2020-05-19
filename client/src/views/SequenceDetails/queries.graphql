@@ -1,0 +1,13 @@
+query SequenceInfo($id: String!) {
+  sequenceByID(id: $id) {
+    id
+    name
+    description
+    steps {
+      id
+      name
+      description
+      status
+    }
+  }
+}
