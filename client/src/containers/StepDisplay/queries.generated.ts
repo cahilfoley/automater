@@ -6,6 +6,7 @@ import { gql } from 'graphql.macro'
 import * as ApolloReactCommon from '@apollo/client'
 import * as ApolloReactHooks from '@apollo/client'
 export type Maybe<T> = T | null
+export type Exact<T extends { [key: string]: any }> = { [K in keyof T]: T[K] }
 
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
@@ -102,17 +103,17 @@ export type commonStepFieldsFragment = { __typename?: 'Step' } & Pick<
   'id' | 'name' | 'description' | 'status'
 >
 
-export type StepInfoQueryVariables = {
+export type StepInfoQueryVariables = Types.Exact<{
   id: Types.Scalars['String']
-}
+}>
 
 export type StepInfoQuery = { __typename?: 'Query' } & {
   stepByID?: Types.Maybe<{ __typename?: 'Step' } & commonStepFieldsFragment>
 }
 
-export type StepUpdatesSubscriptionVariables = {
+export type StepUpdatesSubscriptionVariables = Types.Exact<{
   id: Types.Scalars['String']
-}
+}>
 
 export type StepUpdatesSubscription = { __typename?: 'Subscription' } & {
   stepUpdated?: Types.Maybe<
@@ -122,9 +123,9 @@ export type StepUpdatesSubscription = { __typename?: 'Subscription' } & {
   >
 }
 
-export type ExecuteStepMutationVariables = {
+export type ExecuteStepMutationVariables = Types.Exact<{
   id: Types.Scalars['String']
-}
+}>
 
 export type ExecuteStepMutation = { __typename?: 'Mutation' } & {
   executeStep?: Types.Maybe<

@@ -11,7 +11,7 @@ export const useStepInfoUpdates = (
   stepID: string,
 ) => {
   useEffect(() => {
-    stepInfo.subscribeToMore<StepUpdatesSubscription>({
+    return stepInfo.subscribeToMore<StepUpdatesSubscription>({
       document: StepUpdatesDocument,
       variables: { id: stepID },
       updateQuery: (prev, { subscriptionData }) => {

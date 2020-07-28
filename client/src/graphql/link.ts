@@ -1,6 +1,6 @@
 import { split, HttpLink } from '@apollo/client'
+import { getMainDefinition } from '@apollo/client/utilities'
 import { WebSocketLink } from '@apollo/link-ws'
-import { getMainDefinition } from 'apollo-utilities'
 
 const httpLink = new HttpLink({ credentials: 'include', uri: '/api/graphql' })
 

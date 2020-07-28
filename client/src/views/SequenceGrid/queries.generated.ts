@@ -6,6 +6,7 @@ import { gql } from 'graphql.macro'
 import * as ApolloReactCommon from '@apollo/client'
 import * as ApolloReactHooks from '@apollo/client'
 export type Maybe<T> = T | null
+export type Exact<T extends { [key: string]: any }> = { [K in keyof T]: T[K] }
 
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
@@ -97,7 +98,7 @@ export type SubscriptionstepUpdatedArgs = {
   id?: Maybe<Scalars['String']>
 }
 
-export type SequenceListQueryVariables = {}
+export type SequenceListQueryVariables = Types.Exact<{ [key: string]: never }>
 
 export type SequenceListQuery = { __typename?: 'Query' } & {
   sequences: Array<
