@@ -15,7 +15,7 @@
   "author": "Cahil Foley",
   "dependencies": {
     "apollo-server-express": "^2.16.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "graphql": "^15.3.0",
     "graphql-subscriptions": "^1.1.0",
     "sqlite3": "^5.0.0",
